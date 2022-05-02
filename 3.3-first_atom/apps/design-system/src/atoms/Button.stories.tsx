@@ -8,9 +8,30 @@ export default {
   component: Button,
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args}></Button>;
+const Template: Story<ButtonProps> = (args) => <Button {...args}>Suscribirse</Button>;
 
-export const Default = Template.bind({});
-Default.args = {
-  children: "Suscribirse",
+export const Primary = Template.bind({});
+Primary.args = {
+  mode: "primary",
 };
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  mode: "secondary",
+};
+
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  mode: "tertiary",
+};
+
+export const Inverted = Template.bind({});
+Inverted.args = {
+  mode: "inverted",
+};
+
+export const AsLink: Story<ButtonProps> = () => (
+  <Button href="https://codely.tv" mode="primary">
+    Conoce los cursos
+  </Button>
+);
