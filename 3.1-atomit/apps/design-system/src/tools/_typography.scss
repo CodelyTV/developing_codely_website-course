@@ -1,0 +1,58 @@
+@use "../settings/sizes";
+@use "../settings/typography";
+
+@mixin h500-regular() {
+  font: typography.$sm-h500-regular;
+
+  @media (min-width: sizes.$tablet) {
+    font: typography.$lg-h500-regular;
+  }
+
+  @media (min-width: sizes.$desktop) {
+    font: typography.$xl-h500-regular;
+  }
+}
+
+@mixin h400-regular() {
+  font: typography.$sm-h400-regular;
+
+  @media (min-width: sizes.$tablet) {
+    font: typography.$lg-h400-regular;
+  }
+
+  @media (min-width: sizes.$desktop) {
+    font: typography.$xl-h400-regular;
+  }
+}
+
+@mixin h300-regular() {
+  font: typography.$sm-h300-regular;
+
+  @media (min-width: sizes.$tablet) {
+    font: typography.$xl-h300-regular;
+  }
+}
+
+@mixin h200-regular() {
+  font: typography.$sm-h200-regular;
+
+  @media (min-width: sizes.$mobile) {
+    font: typography.$xl-h200-regular;
+  }
+}
+
+@mixin h100-regular() {
+  font: typography.$sm-h100-regular;
+
+  @media (min-width: sizes.$mobile) {
+    font: typography.$xl-h100-regular;
+  }
+}
+
+@mixin h100-bold() {
+  font: typography.$sm-h100-bold;
+
+  @media (min-width: sizes.$mobile) {
+    font: typography.$xl-h100-bold;
+  }
+}
