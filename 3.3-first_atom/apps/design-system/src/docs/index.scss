@@ -8,6 +8,16 @@ pre {
   font-family: #{typography.$font-family-mono};
 }
 
+.sbdocs-wrapper {
+  position: relative;
+  padding-bottom: 8rem !important;
+}
+
+.docs-footer {
+  position: absolute;
+  bottom: 1rem;
+}
+
 .docs-hero {
   display: flex;
   align-items: center;

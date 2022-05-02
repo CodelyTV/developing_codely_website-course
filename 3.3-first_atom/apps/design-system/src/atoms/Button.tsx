@@ -5,22 +5,36 @@ import { classNames } from "../shared/classNames";
 
 import styles from "./Button.module.scss";
 
+type HtmlButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  href?: undefined;
+};
+
+type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: string;
+};
+
 export interface ButtonProps {
   mode?: "primary" | "secondary" | "tertiary" | "inverted";
   size?: "large" | "small";
-  href?: string;
   children: string;
 }
 
-export const Button = ({ mode = "primary", size = "large", ...props }: ButtonProps) => {
+interface Overload {
+  (props: HtmlButtonProps & ButtonProps): JSX.Element;
+  (props: AnchorProps & ButtonProps): JSX.Element;
+}
+
+const hasHref = (props: HtmlButtonProps | AnchorProps): props is AnchorProps => "href" in props;
+
+export const Button: Overload = ({ mode = "primary", size = "large", ...props }) => {
   const componentProps = {
     className: classNames(styles["btn"], styles[`btn--${mode}`], styles[`btn--${size}`]),
     ...props,
   };
 
-  if (props.href) {
+  if (hasHref(componentProps)) {
     return (
-      <NextLink href={props.href}>
+      <NextLink href={componentProps.href}>
         <a {...componentProps} />
       </NextLink>
     );

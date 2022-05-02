@@ -31,7 +31,7 @@ Inverted.args = {
 };
 
 export const AsLink: Story<ButtonProps> = () => (
-  <Button href="https://codely.tv" mode="primary">
+  <Button href="https://codely.tv" mode="primary" target="_blank">
     Conoce los cursos
   </Button>
 );
