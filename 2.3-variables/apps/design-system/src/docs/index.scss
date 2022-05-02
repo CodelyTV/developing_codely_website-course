@@ -1,0 +1,94 @@
+@use "../settings/colors";
+@use "../settings/typography";
+@use "../tools/typography" as mixins;
+
+code,
+pre {
+  font-family: #{typography.$font-family-mono};
+}
+
+.sbdocs-wrapper {
+  position: relative;
+  padding-bottom: 8rem !important;
+}
+
+.docs-footer {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.docs-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  text-align: center;
+  background: colors.$brand;
+
+  > svg {
+    max-width: 5rem;
+    margin-right: 1rem;
+  }
+
+  > h1 {
+    margin: 0;
+  }
+}
+
+.sbdocs-content {
+  .b500-bold {
+    font: typography.$b500-bold;
+  }
+
+  .b500-regular {
+    font: typography.$b500-regular;
+  }
+
+  .b400-bold {
+    font: typography.$b400-bold;
+  }
+
+  .b400-regular {
+    font: typography.$b400-regular;
+  }
+
+  .b300-bold {
+    font: typography.$b300-bold;
+  }
+
+  .b300-regular {
+    font: typography.$b300-regular;
+  }
+
+  .b200-bold {
+    font: typography.$b200-bold;
+  }
+
+  .b200-regular {
+    font: typography.$b200-regular;
+  }
+
+  .h500-regular {
+    @include mixins.h500-regular;
+  }
+
+  .h400-regular {
+    @include mixins.h400-regular;
+  }
+
+  .h300-regular {
+    @include mixins.h300-regular;
+  }
+
+  .h200-regular {
+    @include mixins.h200-regular;
+  }
+
+  .h100-regular {
+    @include mixins.h100-regular;
+  }
+
+  .h100-bold {
+    @include mixins.h100-bold;
+  }
+}

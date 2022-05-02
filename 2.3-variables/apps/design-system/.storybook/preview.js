@@ -1,5 +1,6 @@
 import * as NextImage from "next/image";
 import codelyTheme from "./codelyTheme";
+import "../src/docs/index.scss";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
