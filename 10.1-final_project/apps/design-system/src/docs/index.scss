@@ -1,0 +1,158 @@
+@use "../settings/colors";
+@use "../settings/border";
+@use "../settings/spacing";
+@use "../settings/typography";
+@use "../tools/typography" as mixins;
+@use "../index.scss";
+
+code,
+pre {
+  font-family: #{typography.$font-family-mono};
+}
+
+.docs-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  text-align: center;
+  background: colors.$brand;
+
+  > svg {
+    max-width: 5rem;
+    margin-right: 1rem;
+  }
+
+  > h1 {
+    margin: 0;
+  }
+}
+
+.sbdocs-content {
+  .b500-bold {
+    font: typography.$b500-bold;
+  }
+
+  .b500-regular {
+    font: typography.$b500-regular;
+  }
+
+  .b400-bold {
+    font: typography.$b400-bold;
+  }
+
+  .b400-regular {
+    font: typography.$b400-regular;
+  }
+
+  .b300-bold {
+    font: typography.$b300-bold;
+  }
+
+  .b300-regular {
+    font: typography.$b300-regular;
+  }
+
+  .b200-bold {
+    font: typography.$b200-bold;
+  }
+
+  .b200-regular {
+    font: typography.$b200-regular;
+  }
+
+  .h500-regular {
+    @include mixins.h500-regular;
+  }
+
+  .h400-regular {
+    @include mixins.h400-regular;
+  }
+
+  .h300-regular {
+    @include mixins.h300-regular;
+  }
+
+  .h200-regular {
+    @include mixins.h200-regular;
+  }
+
+  .h100-regular {
+    @include mixins.h100-regular;
+  }
+
+  .h100-bold {
+    @include mixins.h100-bold;
+  }
+}
+
+.spacing {
+  width: var(--size);
+  height: var(--size);
+  background: colors.$brand;
+
+  &--tiny {
+    --size: #{spacing.$tiny};
+  }
+
+  &--xxs {
+    --size: #{spacing.$xxs};
+  }
+
+  &--xs {
+    --size: #{spacing.$xs};
+  }
+
+  &--sm {
+    --size: #{spacing.$sm};
+  }
+
+  &--md {
+    --size: #{spacing.$md};
+  }
+
+  &--lg {
+    --size: #{spacing.$lg};
+  }
+
+  &--xl {
+    --size: #{spacing.$xl};
+  }
+
+  &--xxl {
+    --size: #{spacing.$xxl};
+  }
+
+  &--section {
+    --size: #{spacing.$section};
+  }
+
+  &--section-huge {
+    --size: #{spacing.$section-huge};
+  }
+
+  &--section-mega {
+    --size: #{spacing.$section-mega};
+  }
+}
+
+.radius {
+  --size: #{spacing.$section-huge};
+
+  width: var(--size);
+  height: var(--size);
+  background: colors.$brand;
+  border-radius: var(--radius);
+
+  &--default {
+    --radius: #{border.$radius-default};
+  }
+
+  &--large {
+    --radius: #{border.$radius-large};
+  }
+
+  &--xl {
+    --radius: #{border.$radius-xl};
+  }
+}

@@ -1,0 +1,16 @@
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/spacing";
+
+.benefit {
+  display: flex;
+  gap: spacing.$tiny;
+  margin: spacing.$xxs 0;
+
+  &--disabled {
+    color: colors.$text-secondary;
+  }
+
+  &--enabled {
+    font-weight: 700;
+  }
+}

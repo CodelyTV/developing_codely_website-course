@@ -1,0 +1,86 @@
+@use "@codely/design-system/src/settings/border";
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/typography";
+@use "@codely/design-system/src/tools/typography" as mixins;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: sizes.$tablet) {
+    flex-direction: row;
+    gap: 3rem;
+    max-width: 72rem;
+  }
+
+  @media (min-width: sizes.$desktop) {
+    gap: 8rem;
+  }
+
+  &__content {
+    text-align: center;
+
+    @media (min-width: sizes.$tablet) {
+      max-width: 41.5rem;
+      text-align: left;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacing.$xs;
+    align-items: center;
+    justify-content: center;
+    margin: spacing.$lg 0 0;
+
+    @media (min-width: sizes.$tablet) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__tip {
+    font: typography.$b300-regular;
+  }
+
+  &__story {
+    display: none;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: border.$radius-xl;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 25%);
+
+    // Fix for player border radius in Safari
+    > * {
+      overflow: hidden;
+      border-radius: border.$radius-xl;
+
+      // player controls
+      > :first-child {
+        border-radius: border.$radius-xl border.$radius-xl 0 0;
+      }
+    }
+
+    @media (min-width: sizes.$tablet) {
+      display: block;
+      max-width: 20.5rem;
+    }
+
+    @media (min-width: sizes.$desktop) {
+      max-width: none;
+    }
+  }
+
+  h1 {
+    @include mixins.h400-regular;
+
+    white-space: pre-line;
+
+    @media (min-width: sizes.$tablet) {
+      @include mixins.h500-regular;
+    }
+  }
+}

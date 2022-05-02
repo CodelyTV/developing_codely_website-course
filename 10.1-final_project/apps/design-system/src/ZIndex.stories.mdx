@@ -1,0 +1,31 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Styles/Z-index" />
+
+# Z-index scale
+
+```scss
+@use "@codely/design-system/src/settings/zindex";
+```
+
+We have a z-index scale to position elements in the page. These are private variables:
+
+```
+$_1: 1;
+$_2: 2;
+$_3: 3;
+$_4: 4;
+$_5: 5;
+$_6: 6;
+$_7: 7;
+$_8: 8;
+$_9: 9;
+$_10: 10;
+```
+
+To position a new element, create a new public variable and add it in the scale, such as:
+
+```
+$header: $_8;
+$modal: $_9;
+```

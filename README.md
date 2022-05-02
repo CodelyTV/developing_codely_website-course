@@ -1,1 +1,2 @@
-# css-html-typescript-developing-codely-website-course
+# Developing Codely's website course
+

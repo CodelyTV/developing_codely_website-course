@@ -1,0 +1,86 @@
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/typography";
+@use "@codely/design-system/src/tools/typography" as mixins;
+
+.error {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: sizes.$tablet) {
+    flex-direction: row;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    @media (min-width: sizes.$tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 44rem;
+    }
+
+    @media (min-width: sizes.$desktop) {
+      max-width: 40rem;
+    }
+  }
+
+  &__title {
+    @include mixins.h500-regular;
+
+    margin-top: spacing.$xs;
+    white-space: pre-line;
+
+    @media (min-width: sizes.$tablet) {
+      @include mixins.h500-regular;
+    }
+  }
+
+  &__subtitle {
+    margin: spacing.$xl 0;
+    font: 1rem/1.33 #{typography.$font-family};
+    white-space: pre-line;
+
+    @media (min-width: sizes.$tablet) {
+      @include mixins.h100-regular;
+    }
+  }
+
+  &__ufo {
+    transform: translateY(0);
+    animation: float 6s ease-in-out infinite;
+
+    @media (min-width: sizes.$tablet) {
+      max-width: 41.5rem;
+    }
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  25%,
+  70% {
+    transform: translateY(50px);
+  }
+
+  50%,
+  95% {
+    transform: translateY(0);
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(200px, -100px);
+    transform: scale(0);
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Ventajas",
+    "miniature": "/img/placeholders/avatar.png",
+    "videoSrc": "/img/placeholders/story.mp4",
+    "posterSrc": "/img/placeholders/story.webp"
+  },
+  {
+    "title": "Enfoque",
+    "miniature": "/img/placeholders/avatar.png",
+    "videoSrc": "/img/placeholders/story2.mp4",
+    "posterSrc": "/img/placeholders/story2.png"
+  },
+  {
+    "title": "Los cursos",
+    "miniature": "/img/placeholders/avatar.png",
+    "videoSrc": "/img/placeholders/story.mp4",
+    "posterSrc": "/img/placeholders/story.webp"
+  },
+  {
+    "title": "El orden",
+    "miniature": "/img/placeholders/avatar.png",
+    "videoSrc": "/img/placeholders/story2.mp4",
+    "posterSrc": "/img/placeholders/story2.png"
+  }
+]

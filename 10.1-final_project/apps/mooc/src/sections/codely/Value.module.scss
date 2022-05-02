@@ -1,0 +1,45 @@
+@use "@codely/design-system/src/settings/border";
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/spacing";
+
+.value {
+  display: flex;
+  gap: spacing.$xl;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: sizes.$desktop) {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding-right: 9rem;
+  }
+
+  &__cards {
+    @media (min-width: sizes.$tablet) {
+      max-width: 34rem;
+      padding: 0 spacing.$md;
+    }
+  }
+
+  &__story {
+    display: none;
+    overflow: hidden;
+    border-radius: border.$radius-xl;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 25%);
+
+    // Fix for player border radius in Safari
+    > * {
+      overflow: hidden;
+      border-radius: border.$radius-xl;
+
+      // player controls
+      > :first-child {
+        border-radius: border.$radius-xl border.$radius-xl 0 0;
+      }
+    }
+
+    @media (min-width: sizes.$tablet) {
+      display: block;
+    }
+  }
+}

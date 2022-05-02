@@ -1,0 +1,44 @@
+@use "sass:color";
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/sizes";
+@use "../settings/spacing";
+@use "../tools/typography";
+
+.minicard {
+  display: flex;
+  gap: spacing.$xs;
+  align-items: center;
+  padding: spacing.$xs;
+  border-radius: border.$radius-default;
+
+  &__title {
+    @include typography.h100-bold;
+  }
+
+  &__sticker {
+    display: none;
+
+    @media (min-width: sizes.$mobile) {
+      display: block;
+      min-width: 6rem;
+    }
+  }
+
+  &--1 {
+    background: colors.$product-alt1;
+  }
+
+  &--2 {
+    color: colors.$white;
+    background: colors.$product-alt2;
+  }
+
+  &--3 {
+    background: colors.$product-alt3;
+
+    ::selection {
+      background: color.adjust(colors.$bg-primary, $alpha: -0.1);
+    }
+  }
+}

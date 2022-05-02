@@ -1,0 +1,81 @@
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+@mixin thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: colors.$bg-primary;
+  border: none;
+  border-radius: 50%;
+  cursor: ew-resize;
+  transition: background 0.3s ease-in-out;
+  appearance: none;
+}
+
+@mixin track {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  appearance: none;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+
+  &__range {
+    flex-grow: 1;
+    width: 100%;
+    height: 0.25rem;
+    margin-right: 0.75rem;
+    background: colors.$bg;
+    background-image: linear-gradient(colors.$bg-darkTheme, colors.$bg-darkTheme);
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+    border-radius: 5px;
+    appearance: none;
+
+    &::-webkit-slider-thumb {
+      @include thumb;
+    }
+
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+
+    &::-ms-thumb {
+      @include thumb;
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+
+    &::-moz-range-track {
+      @include track;
+    }
+
+    &::-ms-track {
+      @include track;
+    }
+
+    &:focus {
+      &::-webkit-slider-thumb {
+        background: colors.$input-active;
+      }
+
+      &::-moz-range-thumb {
+        background: colors.$input-active;
+      }
+
+      &::-ms-thumb {
+        background: colors.$input-active;
+      }
+    }
+  }
+
+  &__input {
+    flex-basis: 4rem;
+  }
+}

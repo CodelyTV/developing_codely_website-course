@@ -1,0 +1,174 @@
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/typography";
+@use "@codely/design-system/src/tools/typography" as mixins;
+
+.fifty {
+  text-align: center;
+
+  &__header {
+    max-width: 43rem;
+    margin: 0 auto;
+  }
+
+  &__tip {
+    margin-top: spacing.$md;
+    font: typography.$b300-regular;
+  }
+}
+
+.flow {
+  position: relative;
+  margin: spacing.$xl auto;
+
+  path {
+    visibility: hidden;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    @media (prefers-reduced-motion) {
+      visibility: visible;
+    }
+  }
+
+  &--animated {
+    path {
+      visibility: visible;
+      animation-name: draw;
+    }
+
+    path:nth-child(3) {
+      animation-duration: 2s;
+    }
+
+    path:last-child {
+      visibility: hidden;
+      animation: appear 0.1s forwards;
+      animation-delay: 3s;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    path:first-child {
+      stroke-dasharray: var(--stroke1-length, 0);
+      stroke-dashoffset: var(--stroke1-length, 0);
+    }
+
+    path:nth-child(2) {
+      stroke-dasharray: var(--stroke2-length, 0);
+      stroke-dashoffset: var(--stroke2-length, 0);
+      animation-delay: 0.5s;
+    }
+
+    path:nth-child(3) {
+      stroke-dasharray: var(--stroke3-length, 0);
+      stroke-dashoffset: var(--stroke3-length, 0);
+      animation-delay: 1s;
+    }
+  }
+
+  &__graph {
+    &--mobile {
+      max-width: 18rem;
+
+      @media (min-width: sizes.$mobile) {
+        max-width: sizes.$mobile-xs;
+      }
+
+      @media (min-width: sizes.$tablet) {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+
+      @media (min-width: sizes.$tablet) {
+        display: block;
+      }
+
+      @media (min-width: sizes.$desktop) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: sizes.$desktop) {
+        display: block;
+      }
+    }
+  }
+
+  &__sticker {
+    display: none;
+
+    @media (min-width: sizes.$desktop) {
+      --size: 7.87rem;
+
+      position: absolute;
+      top: calc(var(--size) * -1);
+      right: calc(var(--size) * -1);
+      display: block;
+      width: var(--size);
+      height: var(--size);
+      transform: scale(0.8, 0.8);
+
+      .flow--animated & {
+        animation: fly 3s forwards;
+      }
+    }
+  }
+
+  &__steps {
+    --padding-x: 4rem;
+
+    @include mixins.h200-regular;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem var(--padding-x) 0;
+    list-style: none;
+
+    @media (min-width: sizes.$mobile) {
+      @include mixins.h300-regular;
+
+      --padding-x: 6rem;
+    }
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw1 {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes appear {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes fly {
+  to {
+    top: 100%;
+    right: 100%;
+    transform: scale(1, 1);
+  }
+}

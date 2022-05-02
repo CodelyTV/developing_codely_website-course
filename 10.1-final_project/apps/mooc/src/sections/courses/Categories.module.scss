@@ -1,0 +1,181 @@
+@use "@codely/design-system/src/settings/border";
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/typography";
+@use "@codely/design-system/src/tools/colors" as colorMixins;
+@use "@codely/design-system/src/tools/typography" as typographyMixins;
+
+.categories {
+  --first-slide-width: auto;
+
+  @media (min-width: sizes.$tablet) {
+    --first-slide-width: 29.25rem;
+  }
+
+  @media (min-width: sizes.$desktop) {
+    --first-slide-width: 37rem;
+  }
+
+  &__header {
+    display: none;
+    width: var(--first-slide-width);
+    margin-bottom: spacing.$lg;
+    text-align: center;
+
+    @media (min-width: sizes.$tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: sizes.$desktop) {
+      margin-right: spacing.$section-huge;
+    }
+
+    > :first-child {
+      margin-bottom: spacing.$lg;
+    }
+
+    &--mobile {
+      display: block;
+
+      @media (min-width: sizes.$tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__description {
+    max-width: 31rem;
+    margin-right: auto;
+    margin-left: auto;
+    font: typography.$b300-regular;
+
+    @media (min-width: sizes.$tablet) {
+      padding: 0 spacing.$md;
+    }
+
+    @media (min-width: sizes.$desktop) {
+      padding: 0;
+    }
+  }
+
+  // hacky way to position carousel nav aligned with first category
+  > div > div:last-child {
+    --margin-to-first-category: calc(var(--first-slide-width) + var(--margin-x) + #{spacing.$md});
+
+    @media (min-width: sizes.$tablet) {
+      margin-left: var(--margin-to-first-category);
+    }
+
+    @media (min-width: sizes.$desktop) {
+      margin-left: calc(var(--margin-to-first-category) + #{spacing.$section-huge});
+    }
+  }
+
+  // hacky way to hide the first slide on mobile
+  > :not(.categories__header) {
+    > div > div:first-child {
+      display: none;
+
+      @media (min-width: sizes.$tablet) {
+        display: block;
+      }
+    }
+  }
+}
+
+.category {
+  --header-size: 20.7rem;
+
+  min-width: 34.2rem;
+  height: 100%;
+  padding: spacing.$xl spacing.$lg;
+  border-radius: border.$radius-default;
+
+  @media (min-width: sizes.$tablet) {
+    display: flex;
+    min-width: 61rem;
+    padding: spacing.$xl;
+  }
+
+  @include colorMixins.color-modifiers;
+
+  &__header {
+    @media (min-width: sizes.$tablet) {
+      display: flex;
+      flex-direction: column;
+      max-width: var(--header-size);
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @include typographyMixins.h100-bold;
+
+    margin-bottom: spacing.$xl;
+
+    @media (min-width: sizes.$tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__figure {
+    display: none;
+
+    @media (min-width: sizes.$tablet) {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: var(--header-size);
+      height: var(--header-size);
+      margin: 0 auto;
+    }
+  }
+
+  &__logo {
+    width: calc(var(--header-size) / 3.5);
+  }
+
+  &__sticker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__courses {
+    font: typography.$b400-bold;
+
+    &:is(ul) {
+      list-style: none;
+    }
+
+    > * + * {
+      margin-top: spacing.$md;
+    }
+  }
+
+  &__course {
+    display: inline-flex;
+    gap: spacing.$xs;
+    align-items: center;
+    padding-left: spacing.$xs;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

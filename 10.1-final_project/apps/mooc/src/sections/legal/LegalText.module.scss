@@ -1,0 +1,32 @@
+@use "@codely/design-system/src/tools/typography" as mixins;
+@use "@codely/design-system/src/settings/typography";
+@use "@codely/design-system/src/settings/spacing.scss";
+
+.legal {
+  max-width: 47.25rem;
+
+  &__title {
+    margin-bottom: spacing.$xxl;
+
+    @include mixins.h500-regular;
+  }
+
+  h2 {
+    margin-top: spacing.$xl;
+    font: typography.$b500-bold;
+  }
+
+  h3 {
+    margin-top: spacing.$xl;
+    font: typography.$b400-bold;
+  }
+
+  * + * {
+    margin-top: spacing.$xs;
+  }
+
+  table {
+    margin-bottom: spacing.$lg;
+    font: typography.$b200-regular;
+  }
+}

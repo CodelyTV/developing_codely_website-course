@@ -1,0 +1,13 @@
+@use "../settings/sizes";
+
+.container {
+  width: var(--container-width);
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 var(--container-padding);
+
+  @media (max-width: sizes.$mobile-xs) {
+    overflow: hidden;
+  }
+}

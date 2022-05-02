@@ -1,0 +1,41 @@
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+.select {
+  position: relative;
+
+  &__control {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: spacing.$tiny spacing.$xxs;
+    font: typography.$b400-regular;
+    background: colors.$white;
+    border: 1px solid colors.$input-border;
+    border-radius: border.$radius-default;
+    appearance: none;
+
+    &--small {
+      padding: spacing.$tiny spacing.$xxs;
+    }
+
+    &--medium {
+      height: 3.75rem;
+      padding: spacing.$xxs spacing.$sm;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 54%;
+    right: 0.8em;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: colors.$input-border;
+    transform: translateY(-50%);
+    content: "";
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+}

@@ -1,0 +1,64 @@
+@use "../settings/colors";
+@use "../settings/sizes";
+@use "../settings/spacing";
+@use "../settings/typography";
+@use "../settings/zindex";
+
+.stories {
+  @media (min-width: sizes.$tablet) {
+    display: none;
+  }
+
+  &__miniatures {
+    display: flex;
+    gap: spacing.$xs;
+    max-width: 100vw;
+    margin: 0 calc(var(--container-padding) * -1) 3.75rem;
+    padding: 0 var(--container-padding);
+    overflow: auto;
+
+    > :first-child {
+      margin-left: auto;
+    }
+
+    > :last-child {
+      margin-right: auto;
+    }
+  }
+
+  &__video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: zindex.$modal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: colors.$bg-darkTheme;
+
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+}
+
+.miniature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: typography.$b200-regular;
+
+  &__image {
+    padding: 0.25rem;
+    border: 2px solid colors.$cta-primary;
+    border-radius: 50%;
+
+    > * {
+      display: block;
+    }
+  }
+}

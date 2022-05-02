@@ -1,0 +1,84 @@
+@use "@codely/design-system/src/settings/border";
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/typography";
+@use "@codely/design-system/src/tools/typography" as mixins;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: spacing.$lg spacing.$md;
+  background: colors.$white;
+  border-radius: border.$radius-default;
+
+  @media (min-width: sizes.$tablet) {
+    min-height: 39rem;
+    padding: spacing.$xl;
+  }
+
+  &--secondary {
+    color: colors.$white;
+    background: transparent;
+    border: 1px solid;
+  }
+
+  &__header {
+    margin-bottom: spacing.$lg;
+
+    @media (min-width: sizes.$desktop) {
+      .card--narrow & {
+        min-height: 9.7rem;
+      }
+    }
+  }
+
+  &__title {
+    @include mixins.h100-bold;
+
+    .card--wide & {
+      @media (min-width: sizes.$tablet) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__description {
+    margin-top: spacing.$sm;
+
+    @include mixins.h100-regular;
+  }
+
+  &__control {
+    margin-top: spacing.$xs;
+  }
+
+  &__content {
+    margin-bottom: auto;
+    font: typography.$b300-regular;
+
+    .card--wide & {
+      @media (min-width: sizes.$tablet) {
+        display: flex;
+        gap: spacing.$xxl;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__cta {
+    width: 100%;
+    max-width: 25rem;
+    margin: spacing.$xs auto 0;
+    text-align: center;
+
+    & > :last-child {
+      width: 100%;
+      margin-top: spacing.$xs;
+    }
+  }
+}
+
+.centered {
+  text-align: center;
+}

@@ -1,0 +1,75 @@
+@use "sass:color";
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/sizes";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+:root {
+  --container-width: #{sizes.$mobile-xs};
+  --container-padding: #{spacing.$sm};
+  --scrollbar-color: colors.$bg;
+  --scrollbar-bg: transparent;
+  --scrollbar-border: colors.$white;
+
+  @media (min-width: sizes.$mobile) {
+    --container-width: #{sizes.$mobile};
+    --container-padding: #{spacing.$md};
+  }
+
+  @media (min-width: sizes.$tablet) {
+    --container-width: #{sizes.$tablet};
+    --container-padding: #{spacing.$lg};
+  }
+
+  @media (min-width: sizes.$desktop) {
+    --container-width: #{sizes.$desktop};
+    --container-padding: #{spacing.$xxl};
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  color: colors.$text-primary;
+  font: typography.$b500-regular;
+  font-family: #{typography.$font-family};
+
+  * {
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg);
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      height: 0.5rem;
+      padding: 0.2rem 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--scrollbar-bg);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-color);
+      border: 1px solid var(--scrollbar-border);
+      border-radius: border.$radius-large;
+    }
+  }
+}
+
+a {
+  color: colors.$text-primary;
+}
+
+:focus-visible {
+  outline: 2px solid colors.$cta-primary;
+  outline-offset: 0.2rem;
+}
+
+::selection {
+  color: colors.$text-primary;
+  background: color.adjust(colors.$bg-selection, $alpha: -0.1);
+}

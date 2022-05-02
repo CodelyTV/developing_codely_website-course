@@ -1,0 +1,43 @@
+@use "../settings/colors";
+
+/* stylelint-disable */
+:export {
+  brand: colors.$brand;
+
+  productAlt1:  colors.$product-alt1;
+  productAlt2: colors.$product-alt2;
+  productAlt3: colors.$product-alt3;
+  productAlt4: colors.$product-alt4;
+  
+  bgPrimary: colors.$bg-primary;
+  bgDarkTheme: colors.$bg-darkTheme;
+  bgSelection: colors.$bg-selection;
+  bg: colors.$bg;
+
+  ctaPrimary: colors.$cta-primary;
+  ctaPrimaryHover: colors.$cta-primary-hover;
+  ctaSecondary: colors.$cta-secondary;
+  ctaSecondaryHover: colors.$cta-secondary-hover;
+  ctaPrimaryGray: colors.$text-secondary;
+
+  textPrimary: colors.$text-primary;
+  textSecondary: colors.$text-secondary;
+  textDarkTheme: colors.$text-secondary-darkTheme;
+  textTertiary: colors.$text-tertiary;
+
+  stateActive: colors.$state-active;
+  stateError: colors.$state-error;
+  stateDisabled: colors.$state-disabled;
+  stateDisabledBg: colors.$state-disabled-bg;
+
+  inputDefault: colors.$input-default;
+  inputActive: colors.$input-active;
+  inputBorder: colors.$input-border;
+
+  checkboxActive: colors.$checbox-active;
+  checkboxDisabled: colors.$checkbox-disabled;
+  checkboxDisabledBg: colors.$checkbox-disabled-bg;
+
+  white: colors.$white;
+  whiteHover: colors.$white-hover;
+}

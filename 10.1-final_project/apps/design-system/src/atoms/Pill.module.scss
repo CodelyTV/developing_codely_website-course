@@ -1,0 +1,29 @@
+@use "sass:color";
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+.pill {
+  display: inline-block;
+  padding: spacing.$tiny spacing.$xs;
+  font: typography.$b300-bold;
+  white-space: nowrap;
+  background: colors.$bg;
+  border: none;
+  border-radius: border.$radius-xl;
+  transition: all 0.2s;
+
+  &:hover {
+    background: color.adjust(colors.$bg, $lightness: -7%);
+  }
+
+  &--active {
+    color: colors.$white;
+    background: colors.$bg-darkTheme;
+
+    &:hover {
+      background: colors.$bg-darkTheme;
+    }
+  }
+}

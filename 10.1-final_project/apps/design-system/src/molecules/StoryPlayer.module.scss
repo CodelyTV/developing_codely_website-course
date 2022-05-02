@@ -1,0 +1,83 @@
+@use "../settings/colors";
+@use "../settings/spacing";
+
+.player {
+  position: relative;
+
+  &__listcontrol {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: calc(100% - 5rem);
+    padding: 0;
+    text-indent: -9999em;
+    background: transparent;
+    border: none;
+
+    &:first-of-type {
+      left: 0;
+    }
+
+    &:last-of-type {
+      right: 0;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: spacing.$xs spacing.$lg;
+    background: linear-gradient(0deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 38%) 100%);
+    opacity: 0;
+    transition: all 0.2s;
+
+    &:focus-within {
+      opacity: 1;
+    }
+
+    @media (hover: none) {
+      opacity: 1;
+    }
+  }
+
+  &:hover .player__controls {
+    opacity: 1;
+  }
+
+  &__btn {
+    z-index: 1;
+    padding: spacing.$tiny;
+    color: colors.$white;
+    background: transparent;
+    border: none;
+  }
+
+  video {
+    aspect-ratio: 1/1.77;
+  }
+}
+
+.progress {
+  display: flex;
+  gap: spacing.$tiny;
+  width: 100%;
+
+  &__bar {
+    flex: 1 1;
+    height: 0.2rem;
+    background: rgb(255 255 255 / 30%);
+    background-image: linear-gradient(colors.$white, colors.$white);
+    background-repeat: no-repeat;
+    background-size: var(--progress, 0%) 100%;
+    border-radius: 0.1rem;
+
+    &--completed {
+      background: colors.$white;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "../settings/spacing";
+@use "../settings/typography";
+
+.label {
+  display: block;
+  margin-bottom: spacing.$tiny;
+  font: typography.$b300-regular;
+
+  &--hidden {
+    position: absolute;
+    visibility: hidden;
+  }
+}

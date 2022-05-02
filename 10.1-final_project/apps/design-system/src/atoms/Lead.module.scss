@@ -1,0 +1,11 @@
+@use "../settings/typography";
+
+.lead {
+  font: typography.$b200-regular;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  &--bold {
+    font-weight: 700;
+  }
+}

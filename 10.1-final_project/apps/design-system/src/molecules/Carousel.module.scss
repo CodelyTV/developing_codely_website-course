@@ -1,0 +1,70 @@
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/sizes";
+
+.carousel {
+  --margin-x: calc(100vw - var(--container-width) + (var(--container-padding) * 2)) / 2;
+
+  width: 100vw;
+  margin-left: calc(-1 * var(--margin-x));
+  overflow: hidden;
+
+  @media (max-width: sizes.$mobile-xs) {
+    --margin-x: var(--container-padding);
+  }
+
+  &__slider {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    transition: transform 0.3s;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:not(.carousel__slider--virtualized) {
+      padding: 0 calc(var(--margin-x));
+    }
+  }
+
+  &__slide {
+    padding-right: spacing.$md;
+    transition: all 0.2s;
+
+    .carousel__slider--virtualized & {
+      transform: translateX(calc(var(--margin-x) + var(--additional-offset, 0px)));
+    }
+  }
+
+  &__nav {
+    margin-top: spacing.$md;
+    margin-left: calc(var(--margin-x));
+    text-align: left;
+
+    @media (hover: none) {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    color: inherit;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.2s;
+
+    &:hover {
+      color: colors.$text-primary;
+      background: colors.$bg;
+    }
+  }
+}

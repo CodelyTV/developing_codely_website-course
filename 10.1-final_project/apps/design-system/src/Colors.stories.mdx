@@ -1,0 +1,96 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+
+import styles from "./docs/colors.module.scss";
+
+<Meta title="Styles/Colors" />
+
+# Colors
+
+```scss
+@use "@codely/design-system/src/settings/colors";
+```
+
+## Brand
+
+<ColorPalette>
+  <ColorItem title="Brand" colors={{ "colors.$brand": styles.brand }} />
+</ColorPalette>
+
+## Products
+
+<ColorPalette>
+  <ColorItem title="Product Variation 1" colors={{ "colors.$product-alt-1": styles.productAlt1 }} />
+  <ColorItem title="Product Variation 2" colors={{ "colors.$product-alt-2": styles.productAlt2 }} />
+  <ColorItem title="Product Variation 3" colors={{ "colors.$product-alt-3": styles.productAlt3 }} />
+  <ColorItem title="Product Variation 4" colors={{ "colors.$product-alt-4": styles.productAlt4 }} />
+</ColorPalette>
+
+If you need to apply product variations as background + text, you can use the color-modifiers mixins:
+
+```
+@use "@codely/design-system/src/tools/colors" as colorMixins;
+
+.my-card {
+  @include colorMixins.color-modifiers;
+}
+```
+
+It will generate the classes `my-card--green`, `my-card--violet`, `my-card--pink` and `my-card--yellow` with the background and readable text color.
+
+## Buttons and CTA
+
+<ColorPalette>
+  <ColorItem title="CTA Primary" colors={{ "colors.$cta-primary": styles.ctaPrimary }} />
+  <ColorItem title="CTA Primary Hover" colors={{ "colors.$cta-primary-hover": styles.ctaPrimaryHover }} />
+  <ColorItem title="CTA Secondary" colors={{ "colors.$cta-secondary": styles.ctaSecondary }} />
+  <ColorItem title="CTA Secondary Hover" colors={{ "colors.$cta-secondary-hover": styles.ctaSecondaryHover }} />
+  <ColorItem title="CTA Primary Gray" colors={{ "colors.$cta-primary-gray": styles.ctaPrimaryGray }} />
+</ColorPalette>
+
+## Text
+
+<ColorPalette>
+  <ColorItem title="Text primary" colors={{ "colors.$text-primary": styles.textPrimary }} />
+  <ColorItem title="Text secondary" colors={{ "colors.$text-secondary": styles.textSecondary }} />
+  <ColorItem title="Text tertiary" colors={{ "colors.$text-tertiary": styles.textTertiary }} />
+  <ColorItem title="Text for dark background" colors={{ "colors.$text-darkTheme": styles.textDarkTheme }} />
+</ColorPalette>
+
+## Backgrounds
+
+<ColorPalette>
+  <ColorItem title="Background primary" colors={{ "colors.$bg-primary": styles.bgPrimary }} />
+  <ColorItem title="Background dark" colors={{ "colors.$bg-darkTheme": styles.bgDarkTheme }} />
+  <ColorItem title="Background selection" colors={{ "colors.$bg-selection": styles.bgSelection }} />
+  <ColorItem title="Background light" colors={{ "colors.$bg": styles.bg }} />
+</ColorPalette>
+
+## Inputs
+
+<ColorPalette>
+  <ColorItem title="Input default" colors={{ "colors.$input-default": styles.inputDefault }} />
+  <ColorItem title="Input active" colors={{ "colors.$input-active": styles.inputActive }} />
+  <ColorItem title="Input border" colors={{ "colors.$input-border": styles.inputBorder }} />
+  <ColorItem title="Checkbox active" colors={{ "colors.$checkbox-active": styles.checkboxActive }} />
+  <ColorItem title="Checkbox disabled" colors={{ "colors.$checkbox-disabled": styles.checkboxDisabled }} />
+  <ColorItem
+    title="Checkbox disabled background"
+    colors={{ "colors.$checkbox-disabled-bg": styles.checkboxDisabledBg }}
+  />
+</ColorPalette>
+
+## States
+
+<ColorPalette>
+  <ColorItem title="State active" colors={{ "colors.$state-active": styles.stateActive }} />
+  <ColorItem title="State error" colors={{ "colors.$state-error": styles.stateError }} />
+  <ColorItem title="State disabled" colors={{ "colors.$state-disabled": styles.stateDisabled }} />
+  <ColorItem title="State disabled background" colors={{ "colors.$state-disabled-bg": styles.stateDisabledBg }} />
+</ColorPalette>
+
+## Other
+
+<ColorPalette>
+  <ColorItem title="White" colors={{ "colors.$white": styles.white }} />
+  <ColorItem title="White hover" colors={{ "colors.$white-hover": styles.whiteHover }} />
+</ColorPalette>

@@ -1,0 +1,26 @@
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/sizes";
+
+.pricing {
+  padding: spacing.$xl 0;
+  background: colors.$bg-darkTheme;
+
+  @media (min-width: sizes.$tablet) {
+    padding: spacing.$section-huge;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacing.$xl;
+    justify-content: center;
+    max-width: 54rem;
+    margin: 0 auto;
+
+    > * {
+      flex-basis: 24rem;
+      flex-grow: 1;
+    }
+  }
+}

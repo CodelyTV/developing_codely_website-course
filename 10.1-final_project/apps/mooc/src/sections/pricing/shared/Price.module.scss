@@ -1,0 +1,50 @@
+@use "sass:color";
+@use "@codely/design-system/src/settings/border";
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/typography";
+@use "@codely/design-system/src/tools/typography" as mixins;
+
+.price {
+  font: typography.$b300-bold;
+
+  @media (min-width: sizes.$tablet) {
+    white-space: nowrap;
+  }
+
+  &__amount {
+    @include mixins.h500-regular;
+
+    font-variant-numeric: tabular-nums !important;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  height: 1.5rem;
+  margin-left: spacing.$tiny;
+  vertical-align: middle;
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    padding: spacing.$tiny;
+    color: colors.$white;
+    font: typography.$b200-regular;
+    white-space: nowrap;
+    background: color.adjust(colors.$bg-darkTheme, $alpha: -0.1);
+    border-radius: border.$radius-default;
+    transform: translateY(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+
+    .tooltip:hover & {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
