@@ -1,6 +1,7 @@
 @use "../settings/colors";
 @use "../settings/typography";
 @use "../tools/typography" as mixins;
+@use "../index.scss";
 
 code,
 pre {
