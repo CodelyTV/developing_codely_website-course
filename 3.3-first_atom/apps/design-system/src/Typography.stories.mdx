@@ -1,0 +1,81 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Styles/Typography" />
+
+# Typography
+
+## Body sizes
+
+```scss
+@use "@codely/design-system/src/settings/typography";
+```
+
+`typography.$b500-bold`
+
+<div className="b500-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`typography.$b500-regular`
+
+<div className="b500-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`typography.$b400-bold`
+
+<div className="b400-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`typography.$b400-regular`
+
+<div className="b400-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`typography.$b300-bold`
+
+<div className="b300-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`typography.$b300-regular`
+
+<div className="b300-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`typography.$b200-bold`
+
+<div className="b200-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`typography.$b200-regular`
+
+<div className="b200-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+## Heading sizes
+
+For heading sizes we use mixins to be able to change the size with media queries easily.
+
+```scss
+@use "@codely/design-system/src/tools/typography";
+```
+
+Note: if you use body sizes and heading sizes in the same component the namespaces clash, so you can use an alias, for example:
+
+```scss
+@use "@codely/design-system/src/tools/typography" as mixins;
+```
+
+`@include mixins.h500-regular;`
+
+<div className="h500-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`@include mixins.h400-regular;`
+
+<div className="h400-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`@include mixins.h300-regular;`
+
+<div className="h300-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`@include mixins.h200-regular;`
+
+<div className="h200-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`@include mixins.h100-regular;`
+
+<div className="h100-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+`@include mixins.h100-bold;`
+
+<div className="h100-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
