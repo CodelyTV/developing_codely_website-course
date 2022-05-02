@@ -1,0 +1,23 @@
+name: CI
+
+on: push
+
+defaults:
+  run:
+    working-directory: ./2.1-setup
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: 🚀 Lint
+    timeout-minutes: 15
+
+    steps:
+      - name: 👍 Checkout
+        uses: actions/checkout@v2
+
+      - name: 📥 Install Dependencies
+        run: yarn install
+
+      - name: 💅 Lint
+        run: yarn lint
