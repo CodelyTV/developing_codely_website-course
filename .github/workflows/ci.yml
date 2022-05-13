@@ -4,7 +4,7 @@ on: push
 
 defaults:
   run:
-    working-directory: ./2.1-setup
+    working-directory: ./4.2-a11y-test
 
 jobs:
   lint:
@@ -21,3 +21,6 @@ jobs:
 
       - name: 💅 Lint
         run: yarn lint
+
+      - name: ✅ Design System - Unit tests
+        run: yarn design-system:test
