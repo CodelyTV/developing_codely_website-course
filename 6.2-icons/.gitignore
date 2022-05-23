@@ -1,0 +1,20 @@
+# Yarn without zero-install - https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# next.js
+.next/
+
+# debug
+yarn-debug.log*
+yarn-error.log*
+
+node_modules
+test-results
+
+.env.local
