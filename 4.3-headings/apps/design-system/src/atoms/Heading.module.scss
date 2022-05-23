@@ -1,0 +1,34 @@
+@use "../tools/typography";
+
+.heading {
+  &::after {
+    animation: blink 1.5s infinite step-end;
+    content: "_";
+  }
+
+  &--large {
+    @include typography.h500-regular;
+  }
+
+  &--medium {
+    @include typography.h400-regular;
+  }
+
+  &--small {
+    @include typography.h300-regular;
+  }
+}
+
+@keyframes blink {
+  0% {
+    visibility: visible;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
