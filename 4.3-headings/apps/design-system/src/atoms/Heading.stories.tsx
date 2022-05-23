@@ -9,8 +9,10 @@ export default {
 } as Meta;
 
 const Template: Story<HeadingProps> = (args) => (
-  <section>
-    <Heading {...args}>This is a heading</Heading>
+  <section aria-labelledby="heading">
+    <Heading {...args} id="heading">
+      This is a heading
+    </Heading>
   </section>
 );
 

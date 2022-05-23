@@ -4,6 +4,7 @@
   &::after {
     animation: blink 1.5s infinite step-end;
     content: "_";
+    content: "_" / "";
   }
 
   &--large {
