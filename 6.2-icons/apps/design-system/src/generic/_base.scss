@@ -1,0 +1,29 @@
+@use "sass:color";
+@use "../settings/colors";
+@use "../settings/typography";
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  color: colors.$text-primary;
+  font: typography.$b500-regular;
+  font-family: #{typography.$font-family};
+}
+
+a {
+  color: colors.$text-primary;
+}
+
+:focus-visible {
+  outline: 2px solid colors.$cta-primary;
+  outline-offset: 0.2rem;
+}
+
+::selection {
+  color: colors.$text-primary;
+  background: color.adjust(colors.$bg-selection, $alpha: -0.1);
+}
