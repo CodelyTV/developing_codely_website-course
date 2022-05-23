@@ -1,0 +1,28 @@
+@use "../settings/sizes";
+@use "../settings/spacing";
+
+.container {
+  --container-width: #{sizes.$mobile-xs};
+  --container-padding: #{spacing.$sm};
+
+  width: var(--container-width);
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 var(--container-padding);
+
+  @media (min-width: sizes.$mobile) {
+    --container-width: #{sizes.$mobile};
+    --container-padding: #{spacing.$md};
+  }
+
+  @media (min-width: sizes.$tablet) {
+    --container-width: #{sizes.$tablet};
+    --container-padding: #{spacing.$lg};
+  }
+
+  @media (min-width: sizes.$desktop) {
+    --container-width: #{sizes.$desktop};
+    --container-padding: #{spacing.$xxl};
+  }
+}

@@ -2,26 +2,19 @@
 @use "@codely/design-system/src/settings/sizes";
 @use "@codely/design-system/src/settings/spacing";
 
+// @use "@codely/design-system/src/tools/layout";
+
 .value {
+  // @include layout.container;
+
   display: flex;
   gap: spacing.$xl;
   align-items: center;
   justify-content: space-between;
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 0 spacing.$md;
 
   @media (min-width: sizes.$desktop) {
     max-width: 73rem;
     padding-right: 9rem;
-  }
-
-  &__cards {
-    // flex-shrink: 1;
-
-    // @media (min-width: sizes.$tablet) {
-    //   max-width: 34rem;
-    // }
   }
 
   &__story {
