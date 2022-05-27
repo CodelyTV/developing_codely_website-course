@@ -1,0 +1,16 @@
+@use "../settings/spacing";
+@use "../settings/sizes";
+
+.layout {
+  > * + * {
+    margin-top: spacing.$section;
+
+    @media (min-width: sizes.$tablet) {
+      margin-top: spacing.$section-huge;
+    }
+
+    @media (min-width: sizes.$desktop) {
+      margin-top: spacing.$section-mega;
+    }
+  }
+}
