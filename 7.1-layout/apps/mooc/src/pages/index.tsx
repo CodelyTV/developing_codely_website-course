@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 
 import { KeyPoints } from "../sections/codely/KeyPoints";
 import { Value } from "../sections/codely/Value";
@@ -25,18 +24,10 @@ const Home: NextPage = () => {
   ];
 
   return (
-    <div>
-      <Head>
-        <title>Codely</title>
-        <meta name="description" content="Cursos bonitos" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <KeyPoints />
-        <Value cards={valueCards} />
-      </main>
-    </div>
+    <>
+      <KeyPoints />
+      <Value cards={valueCards} />
+    </>
   );
 };
 

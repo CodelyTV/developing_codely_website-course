@@ -1,5 +1,7 @@
 import type { AppProps } from "next/app";
 
+import { Layout } from "@codely/design-system/src/objects/Layout";
+
 import { Footer } from "../sections/layout/Footer";
 import { Header } from "../sections/layout/Header";
 
@@ -9,7 +11,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
       <Footer />
     </>
   );
