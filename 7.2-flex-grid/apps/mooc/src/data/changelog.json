@@ -1,0 +1,27 @@
+[
+  {
+    "title": "☕ Café con Codely #19 Novedades novedosas del mundo tech",
+    "platform": "twitch",
+    "url": "http://twitch.tv/codelytv",
+    "image": "/img/changelog/1.png",
+    "mode": "light",
+    "date": "2022-05-10"
+  },
+  {
+    "title": "Maquetando la web de Codely desde 0",
+    "subtitle": "Núria Soriano y Rafa Gómez",
+    "platform": "codely",
+    "url": "https://pro.codely.tv/library/",
+    "image": "/img/changelog/maquetando-codely.png",
+    "mode": "dark",
+    "date": "2022-05-18"
+  },
+  {
+    "title": "¿Cuánto sabes de CSS? Vamos a jugar a un juego… | #laFunción 7x17",
+    "platform": "youtube",
+    "url": "https://youtu.be/Wmn0cWksljw",
+    "image": "/img/changelog/3.png",
+    "mode": "light",
+    "date": "2022-05-07"
+  }
+]
