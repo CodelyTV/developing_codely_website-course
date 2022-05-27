@@ -3,8 +3,19 @@
 @use "../settings/sizes";
 
 .carousel {
+  --margin-x: calc(100vw - var(--container-width) + (var(--container-padding) * 2)) / 2;
+
+  width: 100vw;
+  margin-left: calc(-1 * var(--margin-x));
+  overflow: hidden;
+
+  @media (max-width: sizes.$mobile-xs) {
+    --margin-x: var(--container-padding);
+  }
+
   &__slider {
     display: flex;
+    padding: 0 calc(var(--margin-x));
     overflow-x: scroll;
     overflow-y: hidden;
     transition: transform 0.3s;
@@ -23,6 +34,7 @@
 
   &__nav {
     margin-top: spacing.$md;
+    margin-left: calc(var(--margin-x));
     text-align: left;
 
     @media (hover: none) {
