@@ -1,0 +1,51 @@
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/sizes";
+
+.carousel {
+  &__slider {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    transition: transform 0.3s;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__slide {
+    padding-right: spacing.$md;
+    transition: all 0.2s;
+  }
+
+  &__nav {
+    margin-top: spacing.$md;
+    text-align: left;
+
+    @media (hover: none) {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    color: inherit;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.2s;
+
+    &:hover {
+      color: colors.$text-primary;
+      background: colors.$bg;
+    }
+  }
+}
