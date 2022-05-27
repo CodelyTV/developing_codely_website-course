@@ -14,16 +14,11 @@
 
   &__grid {
     display: grid;
+    grid-auto-rows: 7.5rem;
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-    margin: 3rem 0;
-  }
-
-  &__cell {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 7.5rem;
+    justify-items: center;
+    margin: 3rem 0;
   }
 
   img {
