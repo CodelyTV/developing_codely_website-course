@@ -90,7 +90,7 @@ export function TrustedCompanies() {
         <div className={styles.companies__grid}>
           {logos.map((logo) => {
             return (
-              <div key={logo.src} className={styles.companies__cell}>
+              <div key={logo.src}>
                 <Image src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
               </div>
             );
