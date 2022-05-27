@@ -1,0 +1,8 @@
+@use "../tools/typography";
+
+.avatar {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+}
