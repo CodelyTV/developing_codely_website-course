@@ -24,7 +24,10 @@
       row-gap: 0;
 
       > *:not(.changelog__title) {
+        --offset: calc((-50vh + (var(--top) * 1px) + (var(--height) / 2 * 1px)));
+
         grid-row: span 6;
+        transform: translateY(calc(var(--offset) / 10));
 
         &:first-of-type {
           margin-bottom: var(--grid-spacing);
