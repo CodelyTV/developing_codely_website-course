@@ -1,0 +1,32 @@
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/typography";
+
+.footer {
+  padding-bottom: spacing.$xs;
+  font: typography.$b300-regular;
+
+  @media (min-width: sizes.$tablet) {
+    padding: spacing.$section 0;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: spacing.$lg 0;
+
+    @media (min-width: sizes.$tablet) {
+      margin: spacing.$xxl 0;
+    }
+
+    &--legal {
+      a {
+        color: colors.$text-secondary;
+        text-decoration: none;
+      }
+    }
+  }
+}
