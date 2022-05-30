@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+import { SrOnly } from "@codely/design-system/src/objects/SrOnly";
+
 import { useIsServerSide } from "../shared/useIsServerSide";
 import { useReduceMotion } from "../shared/useReduceMotion";
 
@@ -73,7 +75,19 @@ export function HomeHero() {
       claim="✌️ Arquitectura de software, frontend, devops…"
       stories={stories}
     >
-      {isServerSide() ? fullTitle : title}
+      {isServerSide() ? (
+        <>
+          <span aria-hidden="true">Sube de nivel. Haz código más {keywords[0]}</span>
+          <SrOnly>
+            , {keywords[1]} y {keywords[2]}
+          </SrOnly>
+        </>
+      ) : (
+        <>
+          <span aria-hidden="true">{title}</span>
+          <SrOnly>{fullTitle}</SrOnly>
+        </>
+      )}
     </Hero>
   );
 }
