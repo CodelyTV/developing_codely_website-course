@@ -1,0 +1,41 @@
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/typography";
+
+.keypoints {
+  display: flex;
+  flex-direction: column;
+  gap: spacing.$xl;
+
+  @media (min-width: sizes.$tablet) {
+    flex-direction: row;
+    gap: spacing.$md;
+    align-items: center;
+  }
+
+  @media (min-width: sizes.$desktop) {
+    gap: spacing.$xxl;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  &__header {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    gap: spacing.$lg;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__lead {
+    font: typography.$b300-regular;
+  }
+
+  &__cards {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    gap: spacing.$lg;
+  }
+}

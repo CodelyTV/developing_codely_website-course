@@ -1,0 +1,10 @@
+@use "../settings/colors";
+@use "../settings/spacing";
+
+.player {
+  position: relative;
+
+  video {
+    aspect-ratio: 1/1.77;
+  }
+}
