@@ -1,0 +1,68 @@
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: colors.$text-primary;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: border.$radius-xl;
+  transition: all 0.2s;
+
+  &--large {
+    padding: spacing.$xs spacing.$lg;
+    font: typography.$b400-bold;
+  }
+
+  &--small {
+    padding: spacing.$tiny spacing.$xs;
+    font: typography.$b300-bold;
+  }
+
+  &--primary {
+    background: colors.$cta-primary;
+
+    &:hover {
+      background: colors.$cta-primary-hover;
+    }
+  }
+
+  &--secondary {
+    color: colors.$white;
+    background: colors.$cta-secondary;
+
+    &:hover {
+      background: colors.$cta-secondary-hover;
+    }
+  }
+
+  &--tertiary {
+    background: colors.$white;
+
+    &:hover {
+      background: colors.$white-hover;
+    }
+  }
+
+  &--inverted {
+    color: colors.$white;
+    background: transparent;
+    border-color: colors.$white;
+
+    &:hover {
+      color: colors.$white-hover;
+      border-color: colors.$white-hover;
+    }
+  }
+
+  &:disabled {
+    color: colors.$state-disabled;
+    background: colors.$state-disabled-bg;
+  }
+}
