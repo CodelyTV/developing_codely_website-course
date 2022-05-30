@@ -1,0 +1,43 @@
+@use "../settings/colors";
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  font-family: inherit;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.2s;
+
+  &--small {
+    --size: 3rem;
+  }
+
+  &--medium {
+    --size: 4rem;
+  }
+
+  &--large {
+    --size: 4.75rem;
+  }
+
+  &--light {
+    color: colors.$text-primary;
+    background: colors.$white;
+
+    &:hover {
+      background: colors.$white-hover;
+    }
+  }
+
+  &--dark {
+    color: colors.$white;
+    background: colors.$cta-secondary;
+
+    &:hover {
+      background: colors.$cta-secondary-hover;
+    }
+  }
+}

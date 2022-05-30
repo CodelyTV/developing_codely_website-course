@@ -1,0 +1,80 @@
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 25rem;
+  padding: spacing.$md spacing.$lg;
+  overflow: hidden;
+  background: no-repeat center bottom;
+  background-size: cover;
+  border-radius: border.$radius-default;
+
+  &--light:not(.card--codely) {
+    color: colors.$white;
+    background-color: colors.$bg-darkTheme;
+  }
+
+  &--dark {
+    color: colors.$text-primary;
+    background-color: colors.$bg;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  > *:not(.card__image) {
+    z-index: 1;
+  }
+
+  &__image {
+    z-index: 0;
+  }
+
+  &:not(.card--codely) {
+    &::before,
+    &::after {
+      position: absolute;
+      right: 0;
+      left: 0;
+      content: "";
+    }
+
+    &::before {
+      top: 0;
+      z-index: 1;
+      height: 20%;
+      background: linear-gradient(0deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 38%) 100%);
+    }
+
+    &::after {
+      bottom: 0;
+      height: 50%;
+      background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 38%) 100%);
+    }
+  }
+
+  &__platform {
+    display: flex;
+    align-items: center;
+    margin-bottom: auto;
+
+    > :first-child {
+      margin-right: spacing.$tiny;
+    }
+  }
+
+  &__title {
+    margin-top: spacing.$sm;
+    font: typography.$b500-bold;
+  }
+
+  &__subtitle {
+    font: typography.$b500-regular;
+  }
+}

@@ -1,0 +1,23 @@
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/typography";
+
+.testimonials {
+  padding: spacing.$xl 0;
+  color: colors.$white;
+  text-align: center;
+  background: colors.$bg-darkTheme;
+
+  &__content {
+    margin: spacing.$xxl 0;
+  }
+
+  &__lead {
+    font: typography.$b300-regular;
+
+    @media (min-width: sizes.$tablet) {
+      font: typography.$b400-regular;
+    }
+  }
+}
