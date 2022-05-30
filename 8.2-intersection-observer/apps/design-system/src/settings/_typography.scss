@@ -1,0 +1,32 @@
+$font-family: "Moderat, Arial, sans-serif";
+$font-family-mono: "Moderat Mono, monospace";
+
+// Body sizes
+$b500-bold: 700 1.31rem / 1.33 #{$font-family};
+$b500-regular: 1.31rem / 1.33 #{$font-family};
+$b400-bold: 700 1.125rem / 1.55 #{$font-family};
+$b400-regular: 1.125rem / 1.55 #{$font-family};
+$b300-bold: 700 1rem / 1.5 #{$font-family};
+$b300-regular: 1rem / 1.5 #{$font-family};
+$b200-bold: 700 0.875rem / 1.42 #{$font-family};
+$b200-regular: 0.875rem / 1.42 #{$font-family};
+
+// Desktop title sizes
+$xl-h500-regular: 5rem / 1.05 #{$font-family};
+$xl-h400-regular: 4rem / 1.05 #{$font-family};
+$xl-h300-regular: 3.18rem / 1.17 #{$font-family};
+$xl-h200-regular: 2rem / 1.25 #{$font-family};
+$xl-h100-bold: 700 1.5rem / 1.33 #{$font-family};
+$xl-h100-regular: 1.5rem / 1.33 #{$font-family};
+
+// Tablet title sizes
+$lg-h500-regular: 4.43rem / 1.12 #{$font-family};
+$lg-h400-regular: 3.5rem / 1.14 #{$font-family};
+
+// Mobile title sizes
+$sm-h500-regular: 3.18rem / 1.01 #{$font-family};
+$sm-h400-regular: 2.62rem / 1.14 #{$font-family};
+$sm-h300-regular: 2rem / 1.25 #{$font-family};
+$sm-h200-regular: 1.5rem / 1.33 #{$font-family};
+$sm-h100-bold: 700 1.31rem / 1.33 #{$font-family};
+$sm-h100-regular: 1.31rem / 1.33 #{$font-family};
