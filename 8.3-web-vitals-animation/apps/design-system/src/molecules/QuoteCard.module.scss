@@ -1,0 +1,87 @@
+@use "sass:color";
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/sizes";
+@use "../settings/spacing";
+@use "../settings/typography";
+@use "../tools/typography" as mixins;
+
+.quotecard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 26.4rem;
+  height: 100%;
+  padding: spacing.$lg;
+  color: colors.$text-primary;
+  text-align: left;
+  border-radius: border.$radius-large;
+
+  @media (min-width: sizes.$tablet) {
+    width: 47rem;
+    padding: spacing.$xl;
+  }
+
+  &__quote {
+    @include mixins.h300-regular;
+
+    margin-bottom: spacing.$xl;
+
+    strong {
+      font-weight: 400;
+    }
+  }
+
+  &__sticker {
+    float: right;
+    shape-outside: circle(closest-side at 50% 75%);
+    margin-top: 18%;
+  }
+
+  &__caption {
+    display: flex;
+    gap: spacing.$xs;
+    align-items: center;
+    font: typography.$b400-regular;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 700;
+  }
+
+  &__logo {
+    margin-left: auto;
+  }
+
+  &--1 {
+    background: colors.$product-alt1;
+
+    .quotecard__quote strong {
+      color: colors.$white;
+      background: colors.$product-alt2;
+    }
+  }
+
+  &--2 {
+    color: colors.$white;
+    background: colors.$product-alt2;
+
+    .quotecard__quote strong {
+      color: colors.$text-primary;
+      background: colors.$product-alt3;
+    }
+  }
+
+  &--3 {
+    background: colors.$product-alt3;
+
+    .quotecard__quote strong {
+      background: colors.$product-alt1;
+    }
+
+    ::selection {
+      background: color.adjust(colors.$bg-primary, $alpha: -0.1);
+    }
+  }
+}
