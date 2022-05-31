@@ -1,0 +1,85 @@
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/typography";
+@use "../tools/colors" as mixins;
+
+.course {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  font: typography.$b300-regular;
+  background: colors.$bg;
+  border-radius: border.$radius-default;
+  transition-duration: 0.15s;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: spacing.$md;
+  }
+
+  &__title {
+    font: typography.$b500-bold;
+  }
+
+  &__highlight {
+    width: 100%;
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacing.$xs;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: spacing.$md;
+  }
+}
+
+.authors {
+  display: flex;
+  gap: spacing.$xxs;
+  align-items: center;
+  padding-top: spacing.$xs;
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 11.4rem;
+
+  @include mixins.color-modifiers;
+
+  &__new {
+    position: absolute;
+    top: spacing.$xs;
+    left: spacing.$md;
+    font: typography.$b300-bold;
+  }
+
+  &__brand {
+    display: flex;
+    justify-content: space-between;
+    width: 8.62rem;
+    height: 3.93rem;
+    transition: all 0.3s;
+
+    svg {
+      color: colors.$text-primary;
+    }
+  }
+
+  &__sticker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

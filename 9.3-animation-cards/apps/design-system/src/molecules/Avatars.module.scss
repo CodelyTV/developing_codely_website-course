@@ -1,0 +1,16 @@
+@use "../tools/typography";
+
+.avatars {
+  --avatar-width: 3rem;
+
+  white-space: nowrap;
+
+  > * {
+    display: inline-block;
+    width: var(--avatar-width);
+
+    + * {
+      margin-left: calc(var(--avatar-width) / 2 * -1);
+    }
+  }
+}

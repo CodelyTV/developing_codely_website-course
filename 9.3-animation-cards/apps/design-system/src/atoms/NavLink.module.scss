@@ -1,0 +1,16 @@
+@use "../settings/colors";
+@use "../settings/typography";
+
+.navlink {
+  color: colors.$text-primary;
+  font: typography.$b300-regular;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--active {
+    font: typography.$b300-bold;
+  }
+}

@@ -1,0 +1,49 @@
+@use "../settings/colors";
+@use "../settings/sizes";
+@use "../settings/spacing";
+@use "../tools/typography";
+
+.card {
+  --chat-bg: #{colors.$bg};
+  --bd-radius: 0.25rem;
+  --tip-offset: 1.5rem;
+
+  position: relative;
+  padding: spacing.$md spacing.$lg;
+  background: var(--chat-bg);
+  border-radius: var(--bd-radius);
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: var(--tip-offset) solid transparent;
+    border-bottom-color: var(--chat-bg);
+    content: "";
+  }
+
+  &__title {
+    @include typography.h100-bold;
+  }
+
+  + .card {
+    margin-top: spacing.$lg;
+  }
+
+  &:nth-child(odd) {
+    border-bottom-right-radius: 0;
+
+    &::after {
+      right: calc(var(--tip-offset) * -1);
+    }
+  }
+
+  &:nth-child(even) {
+    border-bottom-left-radius: 0;
+
+    &::after {
+      left: calc(var(--tip-offset) * -1);
+    }
+  }
+}

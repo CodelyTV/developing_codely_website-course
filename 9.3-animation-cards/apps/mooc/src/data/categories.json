@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Diseño y Arquitectura de Software",
+    "shortName": "Arq. Software",
+    "slug": "arquitectura-software",
+    "ordered": true,
+    "starredCourses": [
+      "principios-solid-aplicados",
+      "arquitectura-hexagonal",
+      "testing-introduccion-y-buenas-practicas",
+      "cqrs-command-query-responsibility-segregation",
+      "comunicacion-entre-microservicios-event-driven-architecture",
+      "domain-driven-design-ddd",
+      "ddd-en-typescript-modelado-arquitectura",
+      "ddd-en-java"
+    ],
+    "color": "yellow"
+  },
+  {
+    "name": "Metodologías y buenas prácticas",
+    "shortName": "Buenas prácticas",
+    "slug": "metodologias-buenas-practicas",
+    "ordered": false,
+    "starredCourses": [
+      "tdd",
+      "extreme-programming",
+      "refactoring-code-smells-clean-code-bloaters",
+      "refactoring-change-preventers",
+      "testing-introduccion-y-buenas-practicas",
+      "testing-frontend",
+      "layouts-css",
+      "auditoria-goin"
+    ],
+    "color": "green"
+  },
+  {
+    "name": "Frontend",
+    "shortName": "Frontend",
+    "slug": "frontend",
+    "ordered": true,
+    "starredCourses": [
+      "layouts-css",
+      "css-flex",
+      "css-grid",
+      "arquitectura-css",
+      "javascript-moderno",
+      "testing-frontend",
+      "de-javascript-a-typescript",
+      "web-performance"
+    ],
+    "color": "pink"
+  },
+  {
+    "name": "DevOps",
+    "shortName": "DevOps",
+    "slug": "devops",
+    "ordered": false,
+    "starredCourses": [
+      "docker-de-0-a-deployment",
+      "kubernetes-para-desarrolladores",
+      "gestion-de-logs-con-loki-y-grafana",
+      "elkbeats-centraliza-la-gestion-de-logs-con-the-elastic-stack",
+      "prometheus",
+      "grafana-con-prometheus",
+      "automatizacion-con-github-actions",
+      "github-actions-de-0-a-integracion-continua"
+    ],
+    "color": "violet"
+  },
+  {
+    "name": "Tooling",
+    "shortName": "Tooling",
+    "slug": "tooling",
+    "ordered": false,
+    "starredCourses": [
+      "bash",
+      "notion",
+      "todo-sobre-los-dotfiles",
+      "intellij",
+      "terminal-zsh",
+      "git-introduccion-y-trabajo-en-equipo",
+      "makefiles",
+      "extreme-programming"
+    ],
+    "color": "yellow"
+  },
+  {
+    "name": "Backend",
+    "shortName": "Backend",
+    "slug": "backend",
+    "ordered": false,
+    "starredCourses": [
+      "introduccion-a-kotlin",
+      "introduccion-a-go-tu-primera-app",
+      "api-go-hexagonal",
+      "introduccion-a-scala",
+      "api-http-con-scala-y-akka",
+      "programacion-funcional-refactorizando-codigo-orientado-a-objetos-con-typeclasses",
+      "symfony-mantenible-escalable",
+      "cqrs-y-event-sourcing-con-kotlin-y-axon-framework"
+    ],
+    "color": "green"
+  }
+]

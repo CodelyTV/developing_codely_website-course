@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "dani-santamaria",
+    "name": "Dani Santamaria",
+    "image": "/img/profesores/dani-santamaria.jpg"
+  },
+  {
+    "slug": "isma-navarro",
+    "name": "Isma Navarro",
+    "image": "/img/profesores/isma-navarro.png"
+  },
+  {
+    "slug": "javier-ferrer",
+    "name": "Javier Ferrer",
+    "image": "/img/profesores/javier-ferrer.jpg"
+  },
+  {
+    "slug": "nino-dafonte",
+    "name": "Nino Dafonte",
+    "image": "/img/profesores/nino-dafonte.jpg"
+  },
+  {
+    "slug": "nuria-soriano",
+    "name": "Núria Soriano",
+    "image": "/img/profesores/nuria-soriano.jpg"
+  },
+  {
+    "slug": "rafa-gomez",
+    "name": "Rafa Gómez",
+    "image": "/img/profesores/rafa-gomez.jpg"
+  },
+  {
+    "slug": "isa-garrido",
+    "name": "Isa Garrido",
+    "image": "/img/profesores/isa-garrido.png"
+  },
+  {
+    "slug": "fernando-vilas",
+    "name": "Fernando Vilas",
+    "image": "/img/profesores/fernando-vilas.jpg"
+  },
+  {
+    "slug": "ricardo-borillo",
+    "name": "Ricardo Borillo",
+    "image": "/img/profesores/ricardo-borillo.png"
+  },
+  {
+    "slug": "ruben-salado",
+    "name": "Rubén Salado",
+    "image": "/img/profesores/ruben-salado.jpg"
+  },
+  {
+    "slug": "adrian-perez",
+    "name": "Adrián Pérez",
+    "image": "/img/profesores/adrian-perez.png"
+  },
+  {
+    "slug": "joan-lopez-de-la-franca",
+    "name": "Joan López de la Franca",
+    "image": "/img/profesores/joan-lopez-de-la-franca.png"
+  },
+  {
+    "slug": "ruben-cougil",
+    "name": "Rubén Cougil",
+    "image": "/img/profesores/ruben-cougil.png"
+  },
+  {
+    "slug": "jose-armesto",
+    "name": "Jose Armesto",
+    "image": "/img/profesores/jose-armesto.png"
+  },
+  {
+    "slug": "dani-martin",
+    "name": "Dani Martín",
+    "image": "/img/profesores/dani-martin.png"
+  },
+  {
+    "slug": "juanma-garrido",
+    "name": "JuanMa Garrido",
+    "image": "/img/profesores/juanma-garrido.png"
+  },
+  {
+    "slug": "juan-manuel-serrano",
+    "name": "Juan Manuel Serrano",
+    "image": "/img/profesores/juan-manuel-serrano.png"
+  },
+  {
+    "slug": "javier-fuentes",
+    "name": "Javier Fuentes",
+    "image": "/img/profesores/javier-fuentes.png"
+  },
+  {
+    "slug": "ilia-berlana",
+    "name": "Ilia Berlana",
+    "image": "/img/profesores/ilia-berlana.png"
+  },
+  {
+    "slug": "jordi-llonch",
+    "name": "Jordi Llonch",
+    "image": "/img/profesores/jordi-llonch.png"
+  },
+  {
+    "slug": "ramon-aranda",
+    "name": "Ramon Aranda",
+    "image": "/img/profesores/ramon-aranda.png"
+  },
+  {
+    "slug": "alberto-gualis",
+    "name": "Alberto Gualis",
+    "image": "/img/profesores/alberto-gualis.png"
+  },
+  {
+    "slug": "javier-rubio",
+    "name": "Javier Rubio",
+    "image": "/img/profesores/javier-rubio.png"
+  },
+  {
+    "slug": "dani-latorre",
+    "name": "Dani Latorre",
+    "image": "/img/profesores/dani-latorre.png"
+  },
+  {
+    "slug": "jorge-barroso",
+    "name": "Jorge Barroso",
+    "image": "/img/profesores/jorge-barroso.png"
+  },
+  {
+    "slug": "sergio-gutierrez",
+    "name": "Sergio Gutiérrez",
+    "image": "/img/profesores/sergio-gutierrez.png"
+  },
+  {
+    "slug": "jose-rodriguez",
+    "name": "José E. Rodriguez",
+    "image": "/img/profesores/jose-rodriguez.png"
+  }
+]

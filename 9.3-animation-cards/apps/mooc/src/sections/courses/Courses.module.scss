@@ -1,0 +1,42 @@
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/typography";
+
+.courses {
+  text-align: center;
+
+  &__categories {
+    display: flex;
+    gap: spacing.$sm;
+    padding: spacing.$lg spacing.$sm;
+    overflow: auto;
+
+    > :first-child {
+      margin-left: auto;
+    }
+
+    > :last-child {
+      margin-right: auto;
+    }
+
+    @media (min-width: sizes.$tablet) {
+      margin: spacing.$xl 0;
+    }
+  }
+
+  &__content {
+    margin: spacing.$lg 0;
+    text-align: left;
+
+    // remove margin from carousel nav
+    > * > :last-child {
+      margin-top: 0;
+    }
+  }
+
+  &__card {
+    width: 17rem;
+    height: calc(100% - 1.5rem);
+    transition: all 0.2s;
+  }
+}

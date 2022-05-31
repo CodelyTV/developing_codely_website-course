@@ -1,0 +1,15 @@
+@use "../settings/spacing";
+
+.ui-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacing.$md;
+    align-items: center;
+    justify-content: inherit;
+  }
+}
