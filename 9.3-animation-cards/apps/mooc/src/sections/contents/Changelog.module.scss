@@ -1,0 +1,59 @@
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/sizes";
+
+.changelog {
+  padding: spacing.$xs;
+  color: colors.$white;
+  background: colors.$bg-darkTheme;
+
+  &__content {
+    --grid-spacing: #{spacing.$lg};
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-spacing);
+
+    @media (min-width: sizes.$tablet) {
+      grid-auto-flow: column;
+      grid-template-rows: repeat(12, 5rem);
+      grid-template-columns: repeat(2, 1fr);
+      margin: -#{spacing.$section} 0;
+      padding: 0 var(--grid-spacing);
+      column-gap: var(--grid-spacing);
+      row-gap: 0;
+
+      > *:not(.changelog__title) {
+        --offset: calc((-50vh + (var(--top) * 1px) + (var(--height) / 2 * 1px)));
+
+        grid-row: span 6;
+        transform: translateY(calc(var(--offset) / 10));
+
+        &:first-of-type {
+          margin-bottom: var(--grid-spacing);
+        }
+      }
+    }
+
+    @media (min-width: sizes.$desktop) {
+      --grid-spacing: #{spacing.$section};
+
+      grid-template-rows: repeat(12, 6rem);
+    }
+  }
+
+  &__title {
+    margin: spacing.$xs 0;
+    text-align: center;
+
+    @media (min-width: sizes.$tablet) {
+      grid-row: 3 / 6;
+      grid-column: 2;
+    }
+  }
+}
+
+.link {
+  margin-top: spacing.$xl;
+  text-align: center;
+}

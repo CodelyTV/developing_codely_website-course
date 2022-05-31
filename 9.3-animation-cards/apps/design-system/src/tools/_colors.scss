@@ -1,0 +1,24 @@
+@use "../settings/colors";
+
+@mixin color-modifiers() {
+  &--green {
+    background: colors.$product-alt1;
+  }
+
+  &--violet {
+    color: colors.$white;
+    background: colors.$product-alt2;
+
+    a {
+      color: colors.$white;
+    }
+  }
+
+  &--yellow {
+    background: colors.$product-alt3;
+  }
+
+  &--pink {
+    background: colors.$product-alt4;
+  }
+}

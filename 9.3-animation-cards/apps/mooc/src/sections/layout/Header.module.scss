@@ -1,0 +1,120 @@
+@use "@codely/design-system/src/settings/colors";
+@use "@codely/design-system/src/settings/sizes";
+@use "@codely/design-system/src/settings/spacing";
+@use "@codely/design-system/src/settings/typography";
+@use "@codely/design-system/src/settings/zindex";
+
+.header {
+  --header-height: 4rem;
+
+  position: relative;
+  z-index: zindex.$header;
+
+  @media (min-width: sizes.$tablet) {
+    --header-height: 7.5rem;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--header-height);
+  }
+
+  &__brand {
+    flex-grow: 1;
+    max-width: 7.5rem;
+
+    > svg {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__mobile {
+    @media (min-width: sizes.$tablet) {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+    flex-grow: 1;
+    gap: spacing.$lg;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: spacing.$lg;
+    font: typography.$b300-regular;
+
+    a {
+      text-decoration: none;
+    }
+
+    @media (min-width: sizes.$tablet) {
+      display: flex;
+    }
+  }
+
+  &__login {
+    margin-left: auto;
+  }
+
+  &__icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    color: inherit;
+    background: transparent;
+    border: none;
+  }
+
+  &__collapsible {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    height: calc(100vh - var(--header-height));
+    padding: spacing.$md 0;
+    text-align: center;
+
+    .header--open & {
+      display: flex;
+
+      @media (min-width: sizes.$tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__nav {
+    font: typography.$sm-h400-regular;
+
+    a {
+      display: block;
+      margin: spacing.$md 0;
+      color: colors.$white;
+      text-decoration: none;
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: spacing.$md;
+    justify-content: center;
+  }
+
+  &--open {
+    @media (max-width: sizes.$tablet) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      color: colors.$white;
+      background: colors.$bg-darkTheme;
+    }
+  }
+}

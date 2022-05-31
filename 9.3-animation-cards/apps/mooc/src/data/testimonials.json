@@ -1,0 +1,50 @@
+[
+  {
+    "quote": "Parte positiva de Codely: He mejorado skills técnicas como arquitectura hexagonal e incluso <strong>me sirvió para cambiar de trabajo</strong> y salir de mi zona de confort. Parte negativa: Se me acumula la faena.",
+    "author": {
+      "name": "Jesús A. Canales",
+      "avatar": "/img/testimonials/jesus-canales.jpeg",
+      "position": "Engineering Manager en LoyalGuru"
+    }
+  },
+  {
+    "quote": "Con los cursos de CSS estoy flipando, la verdad es que me están encantando. Ahora <strong>me paso las noches quitando Bootstrap</strong>.",
+    "author": {
+      "name": "Daniel Fonseca",
+      "avatar": "/img/testimonials/daniel-fonseca.jpg",
+      "position": "Software developer"
+    }
+  },
+  {
+    "quote": "<strong>Llevo casi 14 años en esto</strong> y me flipa la cantidad de conocimientos que me siguen faltando. Vuestros cursos me ayudan a asumirlos.",
+    "author": {
+      "name": "Joan Miralles",
+      "avatar": "/img/testimonials/joan-miralles.jpg",
+      "position": " Blockchain dev en Moonlorian"
+    }
+  },
+  {
+    "quote": "Si fuese propietario de una empresa con un equipo de desarrollo, sin duda pagaría a cada trabajador una suscripción a Codely. No se me ocurre mejor manera de hacer que sean <strong>mejores profesionales</strong>.",
+    "author": {
+      "name": "Manel",
+      "avatar": "/img/testimonials/manel.jpg",
+      "position": "Senior software engineer"
+    }
+  },
+  {
+    "quote": "¿Adivinen quién va a hacer que su blog tenga light y dark theme gracias al curso de @CodelyTV? <strong>¡¡¡Qué de cosas he aprendido!!!</strong>",
+    "author": {
+      "name": "Ariane Jurado De Bilbao",
+      "avatar": "/img/testimonials/ari-reinventada.jpg",
+      "position": "Frontend Developer en Sngular"
+    }
+  },
+  {
+    "quote": "Una de las <strong>opciones preferidas de todos los backends</strong> de Uptodown para gastar parte de su presupuesto de formación es CodelyTV Pro, que encaja perfecto en nuestro stack.",
+    "author": {
+      "name": "Daniel R.",
+      "avatar": "/img/testimonials/daniel-r.jpg",
+      "position": "Software development manager en Uptodown"
+    }
+  }
+]
