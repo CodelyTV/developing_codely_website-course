@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import { Button } from "@codely/design-system/src/atoms/Button";
 import { Heading } from "@codely/design-system/src/atoms/Heading";
@@ -12,6 +12,38 @@ import { classNames } from "../shared/classNames";
 import styles from "./Fifty.module.scss";
 
 export function Fifty() {
+  const flow = useRef<HTMLDivElement>(null);
+
+  function createObserver() {
+    return new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const flow = entry.target as HTMLElement;
+
+          if (entry.isIntersecting) {
+            flow.className = classNames(styles.flow, styles["flow--animated"]);
+
+            return;
+          }
+          flow.className = styles.flow;
+        });
+      },
+      { threshold: 0.5 }
+    );
+  }
+
+  useEffect(() => {
+    const observer = createObserver();
+    if (!flow.current) {
+      return;
+    }
+    observer.observe(flow.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <Container tag="section" ariaLabelledby="fifty-title">
       <div className={styles.fifty}>
@@ -20,7 +52,7 @@ export function Fifty() {
             Formación integrada en el flujo de trabajo
           </Heading>
         </header>
-        <div className={styles.flow}>
+        <div ref={flow} className={styles.flow}>
           <FlowMobile id="flow-mobile" className={classNames(styles.flow__graph, styles["flow__graph--mobile"])} />
           <FlowTablet id="flow-tablet" className={classNames(styles.flow__graph, styles["flow__graph--tablet"])} />
           <FlowDesktop id="flow-desktop" className={classNames(styles.flow__graph, styles["flow__graph--desktop"])} />

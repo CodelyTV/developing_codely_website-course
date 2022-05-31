@@ -22,6 +22,10 @@
   position: relative;
   margin: spacing.$xl auto;
 
+  &--animated {
+    background: tomato;
+  }
+
   &__graph {
     &--mobile {
       max-width: 18rem;
