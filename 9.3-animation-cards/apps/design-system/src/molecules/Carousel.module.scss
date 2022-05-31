@@ -35,7 +35,7 @@
     transition: all 0.2s;
 
     .carousel__slider--virtualized & {
-      transform: translateX(calc(var(--margin-x)));
+      transform: translateX(calc(var(--margin-x) + var(--additional-offset, 0px)));
     }
   }
 
