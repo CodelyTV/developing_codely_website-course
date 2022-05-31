@@ -22,8 +22,45 @@
   position: relative;
   margin: spacing.$xl auto;
 
+  --stroke1-length: 10px;
+  --stroke2-length: 10px;
+  --stroke3-length: 10px;
+
+  path {
+    visibility: hidden;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    @media (prefers-reduced-motion) {
+      visibility: visible;
+    }
+  }
+
   &--animated {
-    background: tomato;
+    path {
+      visibility: visible;
+      animation-name: draw;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    path:first-child {
+      stroke-dasharray: var(--stroke1-length, 0);
+      stroke-dashoffset: var(--stroke1-length, 0);
+    }
+
+    path:nth-child(2) {
+      stroke-dasharray: var(--stroke2-length, 0);
+      stroke-dashoffset: var(--stroke2-length, 0);
+      animation-delay: 0.5s;
+    }
+
+    path:nth-child(3) {
+      stroke-dasharray: var(--stroke3-length, 0);
+      stroke-dashoffset: var(--stroke3-length, 0);
+      animation-delay: 1s;
+    }
   }
 
   &__graph {
@@ -82,5 +119,11 @@
 
       --padding-x: 6rem;
     }
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
   }
 }
