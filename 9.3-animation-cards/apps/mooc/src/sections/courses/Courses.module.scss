@@ -40,3 +40,14 @@
     transition: all 0.2s;
   }
 }
+
+.slide-hover {
+  > * {
+    transform: rotate(5deg);
+    transform-origin: bottom left;
+  }
+
+  ~ * {
+    --additional-offset: 2rem;
+  }
+}
