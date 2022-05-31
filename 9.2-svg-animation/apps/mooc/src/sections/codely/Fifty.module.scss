@@ -22,15 +22,10 @@
   position: relative;
   margin: spacing.$xl auto;
 
-  --stroke1-length: 10px;
-  --stroke2-length: 10px;
-  --stroke3-length: 10px;
-
   path {
     visibility: hidden;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 
     @media (prefers-reduced-motion) {
       visibility: visible;
@@ -41,6 +36,16 @@
     path {
       visibility: visible;
       animation-name: draw;
+    }
+
+    path:nth-child(3) {
+      animation-duration: 2s;
+    }
+
+    path:last-child {
+      visibility: hidden;
+      animation: appear 0.1s forwards;
+      animation-delay: 3s;
     }
   }
 
@@ -125,5 +130,11 @@
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes appear {
+  to {
+    visibility: visible;
   }
 }
