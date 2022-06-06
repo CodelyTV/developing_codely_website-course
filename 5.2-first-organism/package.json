@@ -14,11 +14,12 @@
     "dev": "yarn workspace @codely/mooc-app dev",
     "build": "yarn workspace @codely/mooc-app build",
     "design-system:dev": "yarn workspace @codely/design-system dev",
-    "design-system:build": "yarn workspace @codely/design-system build",
+    "build-storybook": "yarn workspace @codely/design-system build",
     "mooc:test:unit-integration": "yarn workspace @codely/mooc-app test:unit-integration",
     "design-system:test": "yarn workspace @codely/design-system test",
     "lint": "eslint --ignore-path .gitignore . && stylelint '**/*.scss'",
-    "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix '**/*.scss'"
+    "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix '**/*.scss'",
+    "chromatic": "npx chromatic --project-token=e74ac09a2127"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -56,6 +57,7 @@
     "prettier-eslint": "^13.0.0",
     "reflect-metadata": "^0.1.13",
     "start-server-and-test": "^1.14.0",
+    "storybook-addon-designs": "^6.2.1",
     "stylelint": "^14.1.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard-scss": "^3.0.0",
