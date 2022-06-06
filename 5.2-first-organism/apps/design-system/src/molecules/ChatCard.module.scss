@@ -4,7 +4,7 @@
 @use "../tools/typography";
 
 .card {
-  --chat-bg: #{colors.$bg};
+  --chat-bg: #{colors.$brand};
   --bd-radius: 0.25rem;
   --tip-offset: 1.5rem;
 
