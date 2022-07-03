@@ -2,6 +2,7 @@
 @use "../settings/colors";
 @use "../settings/spacing";
 @use "../settings/typography";
+@use "../settings/shadows";
 
 .card {
   position: relative;
@@ -13,6 +14,8 @@
   background: no-repeat center bottom;
   background-size: cover;
   border-radius: border.$radius-default;
+  box-shadow: shadows.$shadow-md;
+  
 
   &--light:not(.card--codely) {
     color: colors.$white;
