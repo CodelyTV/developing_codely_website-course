@@ -8,9 +8,10 @@ export default {
   component: Icon,
 } as Meta;
 
-const Template: Story<IconProps> = (args) => <Icon {...args} icon="codely" />;
+const Template: Story<IconProps> = (args) => <Icon {...args} />;
 
 export const Medium = Template.bind({});
 Medium.args = {
   size: "medium",
+  icon: "codely",
 };
