@@ -8,19 +8,21 @@ export default {
   component: IconButton,
 } as Meta;
 
-const ButtonTemplate: Story<IconButtonProps> = (args) => <IconButton {...args} icon="play" />;
+const ButtonTemplate: Story<IconButtonProps> = (args) => <IconButton {...args} />;
 
 export const DarkButton = ButtonTemplate.bind({});
 DarkButton.args = {
   mode: "dark",
   size: "medium",
   label: "Play",
+  icon: "play",
 };
 export const LightButton = ButtonTemplate.bind({});
 LightButton.args = {
   mode: "light",
   size: "medium",
   label: "Play",
+  icon: "play",
 };
 
 export const AsLink: Story<IconButtonProps> = () => (
